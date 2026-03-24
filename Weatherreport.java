@@ -51,16 +51,22 @@ public class Weatherreport{
 
          System.out.print("enter wind speed : ");
          wind = input.nextLine();
-
+        do{
         System.out.print("enter high temperature: ");
          highTemp = input.nextDouble();
 
         System.out.print("enter low temperature: ");
          lowTemp = input.nextDouble();
-
+         if(highTemp < lowTemp){
+             System.out.println("High temperature must be greater than low temperature try again.");
+         }
+        }while (highTemp < lowTemp);
+        do{
         System.out.print("enter uv index: ");
          uvIndex = input.nextInt();
- 
+         if (uvIndex < 0);{
+             System.out.println("uv index cannotbe negative try again."); }
+         }while (uvIndex < 0);
         /*
         STEP 3: Typecasting (if needed)
         - Example: if you read a double but want to display as int
@@ -113,7 +119,7 @@ public class Weatherreport{
         input.close();
     }
 }
- 
+
  
  
  

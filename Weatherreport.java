@@ -27,8 +27,12 @@ public class Weatherreport{
  
  
         // TODO: Declare your variables here
- 
- 
+        String weather;
+        String precipitation;
+        String wind;
+        double highTemp;
+        double lowTemp;
+        int   uvIndex;
         /*
         STEP 2: Get input from the user using Scanner
         - Ask for each variable above
@@ -39,7 +43,23 @@ public class Weatherreport{
  
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
- 
+         System.out.print("enter todays weather: ");
+          weather = input.nextLine();
+
+        System.out.print("enter precipitation : ");
+        precipitation = input.nextLine();
+
+         System.out.print("enter wind speed : ");
+         wind = input.nextLine();
+
+        System.out.print("enter high temperature: ");
+         highTemp = input.nextDouble();
+
+        System.out.print("enter low temperature: ");
+         lowTemp = input.nextDouble();
+
+        System.out.print("enter uv index: ");
+         uvIndex = input.nextInt();
  
         /*
         STEP 3: Typecasting (if needed)

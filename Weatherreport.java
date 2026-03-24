@@ -64,7 +64,7 @@ public class Weatherreport{
         do{
         System.out.print("enter uv index: ");
          uvIndex = input.nextInt();
-         if (uvIndex < 0);{
+         if (uvIndex < 0){
              System.out.println("uv index cannotbe negative try again."); }
          }while (uvIndex < 0);
         /*
@@ -88,15 +88,15 @@ public class Weatherreport{
         // TODO: Write if, if-else, or nested if statements to display tips
         String tips = "";
         if (uvIndex >= 6) {
-            tips += "use sunscreen";
+            tips += "use sunscreen. ";
         }
         int precipValue = Integer.parseInt(precipitation);
         if (precipValue >= 50) {
-            tips += "carry an umbrella";
+            tips += "carry an umbrella. ";
         }
         int windValue = Integer.parseInt(wind);
         if (windValue > 40) {
-            tips += "Windy conditions";
+            tips += "Windy conditions. ";
         }
  
  
@@ -104,26 +104,28 @@ public class Weatherreport{
         STEP 5: Create a fullReport String
         - Combine all user inputs and tips into one formatted sentence or paragraph
         - Use String concatenation (+) or String.format()
-        */
- 
- 
+        */ 
         // TODO: Construct your full weather report here
  
- 
+           String report = "\n weather report:\n" +
+                "condition: " + weather + "\n" +
+                "high temp: " + highTemp + "\n" +
+                "low temp: " + lowTemp + "\n" +
+                "uv index: " + uvIndex + "\n" +
+                "tips: " + tips;
+
         /*
         STEP 6: Print the full weather report
         */
- 
- 
         // TODO: Output your report using System.out.println()
- 
+        System.out.println(report);
  
         /*
         STEP 7: Optional extra challenge
         - Use loops to ask if the user wants to enter another day's report
         - Continue until the user types "no"
         */
- 
+        
  
         // TODO: Implement loop for multiple reports
  

@@ -86,6 +86,18 @@ public class Weatherreport{
  
  
         // TODO: Write if, if-else, or nested if statements to display tips
+        String tips = "";
+        if (uvIndex >= 6) {
+            tips += "use sunscreen";
+        }
+        int precipValue = Integer.parseInt(precipitation);
+        if (precipValue >= 50) {
+            tips += "carry an umbrella";
+        }
+        int windValue = Integer.parseInt(wind);
+        if (windValue > 40) {
+            tips += "Windy conditions";
+        }
  
  
         /*
